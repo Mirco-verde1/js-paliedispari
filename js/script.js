@@ -2,20 +2,28 @@
 
 function checkingPalindromeWord(inputWord){
 
-  var checkingInputName = inputWord.split('').reverse();
+  var checkingInputName = inputWord.split('').reverse().join('');
   if (inputWord === checkingInputName) {
     return true;  //palindroma
   }
   else {
     return false;  // non palindroma
   }
+  checkingPalindromeWord();
 };
-;
 // fine funzione
-var inputWord = prompt('Scrivi la tua parola!')
-
 
 // DA CHIARIRE IL FUNZIONAMENTO SU COME RICHIAMARE IN QUESTO CASO LA FUNZIONE
+var inputName = prompt('Inserisci la tua parola')
+var x = inputName.split('').reverse().join('');
+if (checkingPalindromeWord(x)) {
+  alert('La tua parola è palindroma')
+}else {
+  alert('La tua parola non è palindroma')
+}
+
+
+
 
 
 
@@ -42,11 +50,10 @@ var numberRandomComputer = (randomNumber(1, 5)); //Min e Max
 
  var insertNumber = prompt('Inserisci un numero da 1 a 5')  //Chiedo all'utente un numero e la sua scelta
  var numberInserted = parseInt(insertNumber)
- var equalOrOdd = prompt('Pari o Dispari ?')
  var sumRandomAndInput = ( numberInserted + numberRandomComputer ); //Somma numero inserito e numer randomico computer
  var flag = false;
  var flagSecond = false;
-
+ var equalOrOdd = prompt('Pari o Dispari ?')
 
 
 if (controlEqualOrOdd(sumRandomAndInput)) {
@@ -71,9 +78,9 @@ if (equalOrOdd.length = 7 ) {
 };
 
 
-if (flagSecond && flag == true) {  // Se la scelta 'pari' o 'dispari' da parte dell'utente coincide con il risultato l'utente vince
+if ((flag = true) && (flagSecond = true)) {  // Se la scelta 'pari' o 'dispari' da parte dell'utente coincide con il risultato l'utente vince
   alert('Hai vinto')
-}else if (flagSecond && flag == false) {
+}else if ((flag = false) && (flagSecond = false)) {
   alert('Dispari e vincente')
 }else {
   alert('Hai perso')
